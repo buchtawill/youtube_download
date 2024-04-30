@@ -40,7 +40,6 @@ if __name__ == '__main__':
     videoitag = int(videoitag)
     video_stream = yt.streams.get_by_itag(videoitag)
     
-    
     #choose which audio stream to download
     print("\nChoose an audio stream to download by entering itag:")
     for stream in audio_only:
@@ -56,7 +55,6 @@ if __name__ == '__main__':
     
     #download the video and audio to temporary files
     #add unix time to make sure the path is unique
-    
     print("Downloading video...")
     videopath = video_stream.download(filename=f"tempvideo_{int(time.time())}.mp4")
     print("Downloading audio...")
@@ -77,4 +75,3 @@ if __name__ == '__main__':
     #remove temporary files
     os.remove(videopath)
     os.remove(audiopath)
-    
