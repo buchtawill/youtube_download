@@ -1,4 +1,5 @@
-from pytube import YouTube #make sure to use modified pytube not pytube from pip
+#make sure to use modified pytube not pytube from pip if you want status updates on download speed
+from pytube import YouTube 
 from moviepy.editor import *
 import sys
 import time
